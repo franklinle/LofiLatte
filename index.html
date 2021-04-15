@@ -65,7 +65,15 @@
             }
 
             function pausePlay() {
-                nextSong.pause();
+                if(nextSong.paused)
+                {
+                    nextSong.play();
+                }
+                else
+                {
+                    nextSong.pause();
+                }
+
             }
 
         </script>
