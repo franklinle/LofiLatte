@@ -47,8 +47,6 @@
         <script>
             function shufflePlay() {
 
-                resetPlay();
-
                 fileArray = [
                     "song.mp3",
                     "song1.mp3",
@@ -56,9 +54,9 @@
 
                 var num = Math.floor(Math.random() * fileArray.length);
                 var nextSong = document.getElementById("nextSong");
+                nextSong.load();
                 var shuffleIcon = document.getElementById("shuffleIcon");
 
-                nextSong.volume = 0.1;
 
                 nextSong.innerHTML = "";
                 nextSong.innerHTML += '<source src="media/' + fileArray[num] + '" type="audio/mp3">';
