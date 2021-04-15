@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Lofi Beats</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="navbar">
+
+                <img src="media/logo.png" class="logo">
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Specifications</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Connect</a></li>
+                </ul>
+
+            </div>
+
+            <div class="content">
+
+                <div class="left-col">
+                    <h1>THE <br>REAL</br> SOUND</h1>
+                </div>
+
+                <div class="right-col">
+                    <p>Click here to Listen</p>
+                    <img src="media/play.png" id="icon">
+                </div>
+
+                <div class="center-col">
+                    <p>Shuffle</p>
+                    <img src="media/play.png" id="shuffleIcon">
+                </div>
+
+            </div>
+
+        <audio id="mySong">
+            <source src="media/song.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="nextSong">
+            <source src="media/song.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var mySong = document.getElementById("mySong");
+            var icon = document.getElementById("icon");
+
+            icon.onclick=function(){
+                if (mySong.paused){
+                    mySong.play();
+                    icon.src="media/pause.png";
+                }
+                else{
+                    mySong.pause();
+                    icon.src="media/play.png";
+                }
+            }
+        </script>    
+
+        <script type="text/javascript">
+            function shufflePlay() 
+                {
+                    fileArray = [
+                        "song.mp3", 
+                        "song1.mp3", 
+                        "song2.mp3"]
+
+                    var num = Math.floor(Math.random() * fileArray.length);
+                    var nextSong = document.getElementById("nextSong");
+                    var shuffleIcon = document.getElementById("shuffleIcon");
+
+                    nextSong.innerHTML = "";
+                    nextSong.innerHTML += '<source src="media/' + fileArray[num] + '" type="audio/mp3">';
+                    
+                    shuffleIcon.onclick=function()
+                    {
+                        if(nextSong.paused)
+                        {
+                            nextSong.play();
+                        }
+                        else
+                        {
+                            nextSong.pause();
+                        }
+                    }
+
+                }   
+                
+        </script>
+   
+
+    </body>
+    
+</html>
