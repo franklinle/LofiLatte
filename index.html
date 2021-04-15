@@ -2,6 +2,10 @@
 
 <html>
 
+<audio id="nextSong">
+    <source type="audio/mp3">
+</audio>
+
 <head>
 
     <title>Lofi Beats</title>
@@ -35,51 +39,15 @@
 
             <div class="center-col">
                 <p>Shuffle</p>
-                <img src="media/play.png" id="shuffleIcon">
+                <img src="media/shuffle.gif" id="shuffleIcon">
             </div>
 
         </div>
 
-        <audio id="nextSong">
-            <source type="audio/mp3">
-        </audio>
-
-        <script>
-            function shufflePlay() {
-
-                fileArray = [
-                    "song.mp3",
-                    "song1.mp3",
-                    "song2.mp3"]
-
-                var num = Math.floor(Math.random() * fileArray.length);
-                var nextSong = document.getElementById("nextSong");
-                nextSong.load();
-                var shuffleIcon = document.getElementById("shuffleIcon");
-
-
-                nextSong.innerHTML = "";
-                nextSong.innerHTML += '<source src="media/' + fileArray[num] + '" type="audio/mp3">';
-
-                nextSong.play();
-            }
-
-            function pausePlay() {
-                if(nextSong.paused)
-                {
-                    nextSong.play();
-                }
-                else
-                {
-                    nextSong.pause();
-                }
-
-            }
-
-        </script>
-
         <input type="button" onclick="shufflePlay()" value="Shuffle">
         <input type="button" onclick="pausePlay()" value="Pause">
+
+        <script src="script.js"></script>
 
 </body>
 
