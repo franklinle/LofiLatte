@@ -23,9 +23,11 @@ function shufflePlay() {
     nextSong.load();
 
     nextSong.innerHTML = "";
-    nextSong.innerHTML += '<source src="media/' + fileArray[num] + '" type="audio/mp3">';
+    nextSong.innerHTML += '<source src="music/' + fileArray[num] + '" type="audio/mp3">';
 
     nextSong.play();
+
+
 }
 
 function soundPlay() {
@@ -39,7 +41,7 @@ function soundPlay() {
     nextSound.load();
 
     nextSound.innerHTML = "";
-    nextSound.innerHTML += '<source src="media/' + soundArray[num] + '" type="audio/mp3">';
+    nextSound.innerHTML += '<source src="sound/' + soundArray[num] + '" type="audio/mp3">';
 
 
     nextSound.play();
@@ -86,7 +88,7 @@ function shuffleBG(){
     nextBG.load();
 
     nextBG = "";
-    nextBG += "url('media/" + bgArray[num] + "')";
+    nextBG += "url('background/" + bgArray[num] + "')";
 
     document.body.style.backgroundImage = nextBG;
 }
