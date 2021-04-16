@@ -6,6 +6,11 @@
     <source type="audio/mp3">
 </audio>
 
+<audio id="nextSound">
+    <source type="audio/mp3">
+</audio>
+
+
 <head>
 
     <title>Lofi Beats</title>
@@ -17,9 +22,9 @@
 
     <div class="container">
 
-        <div class="navbar">
+        <!-- <img src="media/logo.jpg" class="logo"> -->
 
-            <img src="media/logo.jpg" class="logo">
+        <div class="navbar">
 
             <ul>
                 <li><a href="#">Home</a></li>
@@ -31,24 +36,23 @@
 
         </div>
 
-        <div class="content">
+        <button onclick="shufflePlay()">Shuffle Music</button>
+        <button onclick="shuffleBG()">Shuffle Background</button>
+        <button onclick="soundPlay()">Shuffle Sound</button>
 
-            <div class="left-col">
-                <h1>CHILL <br>LOFI</br> BEATS</h1>
-            </div>
 
-            <div class="center-col">
-                <p>Shuffle</p>
-                <img src="media/shuffle.gif" id="shuffleIcon">
-            </div>
 
-        </div>
+        <li>
+            <input id="volume" type="range"></input>
+        </li>
 
-        <input type="button" onclick="shufflePlay()" value="Shuffle">
-        <input type="button" onclick="pausePlay()" value="Pause">
-
-        <script src="script.js"></script>
+        
+        <li>
+            <input id="volume2" type="range"></input>
+        </li>
 
 </body>
+
+<script src="script.js"></script>
 
 </html>
