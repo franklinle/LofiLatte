@@ -33,9 +33,9 @@ function shufflePlay() {
 function soundPlay() {
 
     soundArray = [
-        "sound.mp3",
-        "sound1.mp3",
-        "sound2.mp3"]
+        "crickets.mp3",
+        "tavern.mp3",
+        "rainy.mp3"]
 
     var num = Math.floor(Math.random() * soundArray.length);
     nextSound.load();
