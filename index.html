@@ -10,7 +10,6 @@
     <source type="audio/mp3">
 </audio>
 
-
 <head>
 
     <title>Lofi Beats</title>
@@ -19,7 +18,6 @@
 </head>
 
 <body>
-
     <div class="container">
 
         <!-- <img src="media/logo.jpg" class="logo"> -->
@@ -36,18 +34,22 @@
 
         </div>
 
-        <button onclick="shufflePlay()">Shuffle Music</button>
-        <li>
+        <div class="haha">
+            <button onclick="shufflePlay()" id="testbutton">Shuffle Music</button>
+
             <input id="volume" type="range"></input>
-        </li>
-        <button onclick="soundPlay()">Shuffle Sound</button>
-        <li>
+
+            <button onclick="soundPlay()">Shuffle Sound</button>
+
             <input id="volume2" type="range"></input>
-        </li>
 
-        <button onclick="shuffleBG()">Shuffle Background</button>
+            <button onclick="shuffleBG()">Shuffle Background</button>
 
+        </div>
 
+        <div class="nowPlaying">
+            <p id="nowPlaying"></p>
+        </div>
 
 </body>
 

@@ -8,22 +8,34 @@ var volume = document.querySelector('#volume');
 
 var volume2 = document.querySelector('#volume2');
 
+var bleep = new Audio();
+
+bleep.src = "music/song.mp3";
+
 nextSong.volume = 0.5;
 
 nextSound.volume = 0.5;
 
 function shufflePlay() {
 
-    fileArray = [
+    mp3Array = [
         "song.mp3",
         "song1.mp3",
         "song2.mp3"]
 
-    var num = Math.floor(Math.random() * fileArray.length);
+    nameArray = [
+        "The Weeknd - Blinding Lights",
+        "Halsey - Bad At Love",
+        "Kendrick Lamar, SZA - All The Stars"]
+
+
+    var num = Math.floor(Math.random() * mp3Array.length);
     nextSong.load();
 
     nextSong.innerHTML = "";
-    nextSong.innerHTML += '<source src="music/' + fileArray[num] + '" type="audio/mp3">';
+    nextSong.innerHTML += '<source src="music/' + mp3Array[num] + '" type="audio/mp3">';
+
+    document.getElementById("nowPlaying").innerHTML = 'Now Playing: ' + nameArray[num];
 
     nextSong.play();
 
@@ -69,21 +81,21 @@ volume2.addEventListener('change', function (e) {
 window.onkeydown = function (event) {
     if (event.keyCode == 32) {
         shufflePlay();
-    }; 
-}; 
+    };
+};
 
 
 
 /* Background Button */
 
-function shuffleBG(){
+function shuffleBG() {
 
     bgArray = [
         "image.gif",
         "image1.gif",
         "image2.gif"
     ]
-    
+
     var num = Math.floor(Math.random() * bgArray.length);
     nextBG.load();
 
